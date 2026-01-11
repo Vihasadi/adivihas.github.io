@@ -317,3 +317,72 @@ body{
   .facts{ grid-template-columns: 1fr; }
   .hero{ min-height:640px; }
 }
+
+/* FULL-BLEED HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url("assets/nyc.jpg");
+  background-size: cover;
+  background-position: center top;
+}
+
+/* Dark overlay for contrast */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Content container */
+.hero-inner {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-left: 8%;
+  color: white;
+}
+
+/* Profile photo */
+.hero-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 4px solid white;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+/* Text */
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.hero-text h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+}
