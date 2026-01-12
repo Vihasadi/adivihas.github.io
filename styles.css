@@ -482,3 +482,21 @@ body{
     font-size: 16px;
   }
 }
+/* HERO SOCIAL ICONS */
+.hero-socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.hero-socials a img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1); /* white icons */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hero-socials a:hover img {
+  transform: translateY(-3px);
+  opacity: 0.8;
+}
